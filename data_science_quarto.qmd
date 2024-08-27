@@ -1,0 +1,54 @@
+---
+title: "Practice with Quarto - Data Science Topics"
+format: html
+editor: visual
+---
+
+## Discussion: Being a Data Scientist
+
+Being a data scientist is about solving practical problems using data and various analytical and predictive techniques, including statistical analysis and machine learning models. The goal may be to answer a question once, like "should we enact policy a versus policy b?", or to automate an ongoing task, such as recommending the next news article that a site user should read.
+
+In practice, a data scientist's time is largely spent preparing data for analysis and modeling. Other tasks done by a data scientist include:
+
+-   Working with stakeholders and teammates in the data pipeline to determine the applicability and utility of attainable data and data science to desired business outcomes 
+
+-   Planning project timelines and tasks 📆
+-   Completing basic analysis of a dataset
+-   Designing and/or building visuals of data (plots, dashboards, etc.)📊
+-   Testing the utility of different machine learning models with a dataset
+-   Testing the effectiveness of a model in use 📈
+-   Retraining previously developed models
+-   Communicating progress and results to project stakeholders 🗣️
+
+Data scientists and statisticians have similar technical abilities, as both must be analytical problem solvers. They both work with data, which means they use computers to manipulate data and perform calculations. These calculations include statistical metrics for the data which may then be presented to stakeholders.
+
+The differences lie in the methods used, goals achieved, and who the stakeholders are. Statisticians are more likely to work with numerical data only, while data scientists often work with many different types of data, including categorical data and unstructured data such as images and text. Data scientists must also employ more computer science skills, as their deliverables may require greater technological integration. Meanwhile, statisticians may need to be more fluent with formal content presentation, since their deliverables may be more research- or academic-focused. Stakeholders for data science projects may also be more profit-motivated/business-oriented compared to the government and research institutions that often employ statisticians.
+
+Having worked for both for-profit companies as well as research institutions, I have some familiarity with both of these employment situations. In research, I have developed very basic code for proofs of concept. On software projects, I have learned how to develop production-level code that serves a purpose for customers, and how to build robust machine learning models. However, I still lack skills in both fields, needing more statistical knowledge to better understand model performance, as well as better data science skills to efficiently explore data and present results.
+
+## Exploration of Petal Width in Iris Dataset
+
+First, store the estimated densities of petal width in variable *y*:
+
+```{r}
+y <- density(iris$Petal.Width)
+```
+
+View the class, type, and structure of *y*:
+
+```{r}
+class(y)
+typeof(y)
+str(y)
+```
+
+Plot the estimated densities:
+
+```{r}
+#| echo: false
+plot(y, 
+     main="Density of Petal Widths in Iris Data",
+     xlab="Petal Width")
+```
+
+
